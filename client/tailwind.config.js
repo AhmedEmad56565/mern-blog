@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    'node_modules/flowbite-react/lib/esm/**/*.js',
+  ],
   theme: {
     container: {
       center: true,
@@ -14,5 +18,6 @@ export default {
     },
     extend: {},
   },
-  plugins: [],
+  // eslint-disable-next-line no-undef
+  plugins: [require('flowbite/plugin')],
 };
